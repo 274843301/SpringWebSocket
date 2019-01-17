@@ -38,6 +38,7 @@ public class StompController {
      */
     @SubscribeMapping("/getShout")
     //@SendTo("/app/marco") // @SubscribeMapping 默认直接返回给客户端,如果你加了SendTo的话则要经过代理
+    //若没有添加@SendTo注解且该方法有返回值，则返回的目的地地址为/topic/getShout，经过消息代理，客户端需要订阅了这个主题才能收到返回消息
     public Shout getShout(){
         Shout shout = new Shout();
         shout.setMessage("Hello STOMP");

@@ -39,8 +39,10 @@ public class WebSocketStompConfig extends AbstractWebSocketMessageBrokerConfigur
     private String password;
 
     /**
-     * 将 "/stomp" 注册为一个 STOMP 端点。这个路径与之前发送和接收消息的目的地路径有所
+     * 将 "/stomp" 注册为一个 STOMP (注册点)端点。这个路径与之前发送和接收消息的目的地路径有所
      * 不同。这是一个端点，客户端在订阅或发布消息到目的地路径前，要连接到该端点。
+     在网页上我们就可以通过这个链接
+      http://localhost:{port}/{context}/stomp
      *
      * @param registry
      */
@@ -66,8 +68,9 @@ public class WebSocketStompConfig extends AbstractWebSocketMessageBrokerConfigur
                 .setRelayPort(port)
                 .setClientLogin(userName)
                 .setClientPasscode(password);*/
-
+           //全局使用的消息前缀（客户端订阅路径上会体现出来）
         registry.setApplicationDestinationPrefixes("/app", "/foo");
+        // 点对点使用的订阅前缀（客户端订阅路径上会体现出来），不设置的话，默认也是/user/
         registry.setUserDestinationPrefix("/user");
     }
 

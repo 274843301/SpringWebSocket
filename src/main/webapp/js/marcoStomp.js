@@ -1,5 +1,5 @@
 /*STOMP*/
-var url = 'http://localhost:8080/stomp';
+var url = 'http://localhost:8080/SpringWebSocket/stomp';
 var sock = new SockJS(url);
 var stomp = Stomp.over(sock);
 

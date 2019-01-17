@@ -60,6 +60,9 @@ public class WebSocketStompConfig extends AbstractWebSocketMessageBrokerConfigur
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         //基于内存的STOMP消息代理
+        //用户订阅主题的前缀 
+//topic 代表发布广播，即群发 
+//queue 代表点对点，即发指定用户
         registry.enableSimpleBroker("/queue", "/topic");
 
         //基于RabbitMQ 的STOMP消息代理

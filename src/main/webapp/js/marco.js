@@ -9,7 +9,7 @@ if (window.WebSocket) {
 var count = 0;
 
 /*WebSocket*/
-var url = 'ws://localhost:8080/marco2';
+var url = 'ws://localhost:8080/SpringWebSocket/marco2';
 var sock = new WebSocket(url);
 
 

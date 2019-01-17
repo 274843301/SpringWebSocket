@@ -2,7 +2,7 @@
 var count = 0;
 
 /*SockJS*/
-var url = 'http://localhost:8080/marcoSockJS';
+var url = 'http://localhost:8080/SpringWebSocket/marcoSockJS';
 var sock = new SockJS(url);
 
 sock.onopen = function (ev) {

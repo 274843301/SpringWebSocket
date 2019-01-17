@@ -2,7 +2,7 @@
 var count = 0;
 
 /*WebSocket*/
-var url = 'ws://localhost:8080/ws';
+var url = 'ws://localhost:8080/SpringWebSocket/ws';
 var sock = new WebSocket(url);
 
 
